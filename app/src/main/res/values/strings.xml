@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MVVM Koin DI Example</string>
+    <string name="Error">Error fetching posts!</string>
+</resources>
