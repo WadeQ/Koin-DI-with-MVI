@@ -22,7 +22,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MVVMKoinDIExampleTheme {
-                val viewModel = getViewModel<PostsViewModel>()
                 //observe network calls for test
                 viewModel.state
                 // A surface container using the 'background' color from the theme
