@@ -24,5 +24,5 @@ val repositoryModule = module {
         )
     }
 
-    single<IPostsRepository> { providePostsRepository(get(), get(), get(), get()) }
+    single { providePostsRepository(get(), get(), get(), get()) }
 }

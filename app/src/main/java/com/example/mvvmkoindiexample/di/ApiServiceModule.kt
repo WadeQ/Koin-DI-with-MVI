@@ -12,5 +12,5 @@ val apiServiceModule = module {
         return retrofit.create(ApiService::class.java)
     }
 
-    single<ApiService> { providesApiService(get()) }
+    single { providesApiService(get()) }
 }

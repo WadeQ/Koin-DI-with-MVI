@@ -12,7 +12,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.mvvmkoindiexample.presentation.viewmodels.PostsViewModel
 import com.example.mvvmkoindiexample.ui.theme.MVVMKoinDIExampleTheme
-import org.koin.androidx.viewmodel.ext.android.getViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
@@ -22,14 +21,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MVVMKoinDIExampleTheme {
-                //observe network calls for test
-                viewModel.state
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    Greeting("Android ${viewModel.state.posts?.size}")
                 }
             }
         }
