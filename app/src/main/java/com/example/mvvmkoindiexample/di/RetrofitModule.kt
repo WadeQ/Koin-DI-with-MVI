@@ -38,7 +38,7 @@ val retrofitModule = module {
             .build()
     }
 
-    single { provideMoshiBuilder() }
+    single<Moshi> { provideMoshiBuilder() }
     single { providesRetrofit(get(), get()) }
 
 }

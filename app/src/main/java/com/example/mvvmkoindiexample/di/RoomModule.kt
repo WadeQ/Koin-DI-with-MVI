@@ -19,7 +19,7 @@ val roomModule = module {
         return  database.postsDao()
     }
 
-    single { providesRoomDatabase(androidApplication()) }
-    single { providesPostsDao(get()) }
+    single<PostsDatabase> { providesRoomDatabase(androidApplication()) }
+    single<PostsDao> { providesPostsDao(get()) }
 
 }
