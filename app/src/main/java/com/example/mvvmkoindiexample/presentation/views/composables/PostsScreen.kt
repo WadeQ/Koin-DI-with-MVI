@@ -44,8 +44,9 @@ fun PostsScreen(
                        posts = posts,
                        modifier = Modifier
                            .fillMaxWidth()
-                           .clickable {  }
+                           .clickable { }
                    )
+                   Spacer(modifier = Modifier.height(16.dp))
                }
            }
        }
