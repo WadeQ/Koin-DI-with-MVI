@@ -28,7 +28,6 @@ import retrofit2.create
 import java.util.concurrent.TimeUnit
 
 val databaseModule = module {
-
     single {
         Room.databaseBuilder(
             androidContext(),
@@ -43,7 +42,6 @@ val daoModule: Module = module {
 }
 
 val retrofitModule: Module = module {
-
     single {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = when (BuildConfig.BUILD_TYPE) {
@@ -73,7 +71,6 @@ val retrofitModule: Module = module {
     }
 
     single {
-
         val gson = GsonBuilder()
             .serializeNulls()
             .create()
